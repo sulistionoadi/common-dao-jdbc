@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.sulistionoadi.ngoprek</groupId>
+	<artifactId>common-dao-jdbc</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+
+	<name>Common Dao JDBC</name>
+	<description>Common Class for Query Database using JDBC</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+		
+		<aspectj.version>1.9.5</aspectj.version>
+		<common-pss.version>1.0.0</common-pss.version>
+		<commons.lang3.version>3.9</commons.lang3.version>
+		<javax-servlet.version>4.0.1</javax-servlet.version>
+		<lombok.version>1.18.12</lombok.version>
+		<slf4j.version>1.7.30</slf4j.version>
+		<org.springframework.version>5.2.2.RELEASE</org.springframework.version>
+		<org.springframework.security.version>5.2.1.RELEASE</org.springframework.security.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.sulistionoadi.ngoprek</groupId>
+			<artifactId>common-pss</artifactId>
+			<version>${common-pss.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${org.springframework.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons.lang3.version}</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+
+</project>
