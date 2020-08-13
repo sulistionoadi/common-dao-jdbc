@@ -15,7 +15,6 @@ public class RowMapperUtils {
 	public static Boolean getBooleanValue(ResultSet rs, int rowNum, String columnName) throws SQLException {
 		Integer columnVal = rs.getInt(columnName);
 
-		log.debug("Check Boolean Value for column:{} value:{}", columnName, columnVal);
 		if (columnVal != null) {
 			switch (columnVal) {
 				case 0:
