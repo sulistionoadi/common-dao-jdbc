@@ -13,21 +13,20 @@ public class RowMapperUtils {
 	private final static Logger log = LoggerFactory.getLogger(RowMapperUtils.class);
 	
 	public static Boolean getBooleanValue(ResultSet rs, int rowNum, String columnName) throws SQLException {
-		Boolean bool = Boolean.FALSE;
 		Integer columnVal = rs.getInt(columnName);
+
+		log.debug("Check Boolean Value for column:{} value:{}", columnName, columnVal);
 		if (columnVal != null) {
 			switch (columnVal) {
-			case 0:
-				bool = Boolean.FALSE;
-				break;
-			case 1:
-				bool = Boolean.TRUE;
-				break;
-			default:
-				throwError(columnName, columnVal, rowNum);
+				case 0:
+					return Boolean.FALSE;
+				case 1:
+					return Boolean.TRUE;
+				default:
+					throwError(columnName, columnVal, rowNum);
 			}
 		}
-		return bool;
+		return Boolean.FALSE;
 	}
 	
 	public static Date getDateValue(ResultSet rs, int rowNum, String columnName) throws SQLException {
