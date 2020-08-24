@@ -20,7 +20,7 @@ public class DataAuditorAspect {
 
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
 	
-	@Before("execution(* ..service.impl..*.save(..))")
+	@Before("execution(* *.save(..)) && within(*..service.impl.*)")
 	public void beforeSave(JoinPoint joinPoint) {
 		Statement stmt;
 		Object theDTO = joinPoint.getArgs()[0];
@@ -47,7 +47,7 @@ public class DataAuditorAspect {
 	
 	}
 	
-	@Before("execution(* ..service.impl..*.update(..))")
+	@Before("execution(* *.update(..)) && within(*..service.impl.*)")
 	public void beforeUpdate(JoinPoint joinPoint) {
 		Statement stmt;
 		Object theDTO = joinPoint.getArgs()[0];
@@ -73,7 +73,7 @@ public class DataAuditorAspect {
 		}
 	}
 	
-	@Before("execution(* ..service.impl..*.setAsDelete(..))")
+	@Before("execution(* *.setAsDelete(..)) && within(*..service.impl.*)")
 	public void beforeDelete(JoinPoint joinPoint) {
 		log.debug("Before Delete {} ", joinPoint.getTarget());
 
@@ -93,7 +93,7 @@ public class DataAuditorAspect {
 		}
 	}
 	
-	@Before("execution(* ..service.impl..*.setActive(..))")
+	@Before("execution(* *.setActive(..)) && within(*..service.impl.*)")
 	public void beforeSetActive(JoinPoint joinPoint) throws CommonRuntimeException {
 		log.debug("Before setActive {} ", joinPoint.getTarget());
 
