@@ -7,6 +7,7 @@ import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 
 import com.sulistionoadi.ngoprek.common.constant.ErrorCode;
 import com.sulistionoadi.ngoprek.common.exception.CommonException;
@@ -19,6 +20,10 @@ public class DaoUtils {
 
 	public NamedParameterJdbcTemplate getNamedParameterJdbcTemplate(DataSource datasource) {
 		return new NamedParameterJdbcTemplate(datasource);
+	}
+	
+	public SimpleJdbcInsert getSimpleJdbcInsert(DataSource datasource) {
+		return new SimpleJdbcInsert(datasource);
 	}
 	
 	public void validateRecordBeforeUpdate(Object o) throws CommonException {
