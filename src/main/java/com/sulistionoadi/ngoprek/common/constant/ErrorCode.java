@@ -11,6 +11,8 @@ public class ErrorCode {
 	public static String RC_THREAD_FULL = "0006";
 	public static String RC_DATA_INACTIVE = "0007";
 	
+	public static String RC_ACCESS_DENIED = "0403";
+	
 	public static String RC_INVALID_PARAMETER = "2001";
 	public static String RC_INVALID_SESSION = "2002";
 	public static String RC_INVALID_PERMISSION = "2003";
