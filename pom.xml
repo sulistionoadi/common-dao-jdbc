@@ -5,7 +5,7 @@
 
 	<groupId>com.sulistionoadi.ngoprek</groupId>
 	<artifactId>common-dao-jdbc</artifactId>
-	<version>1.1.0</version>
+	<version>1.1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>Common Dao JDBC</name>
@@ -30,10 +30,10 @@
 	</properties>
 	
 	<scm>
-		<developerConnection>scm:git:git@github.com:sulistionoadi/common-pss.git</developerConnection>
-		<connection>scm:git:git@github.com:sulistionoadi/common-pss.git</connection>
-		<url>https://github.com/sulistionoadi/common-pss</url>
-		<tag>1.1.0</tag>
+		<developerConnection>scm:git:git@github.com:sulistionoadi/common-dao-jdbc.git</developerConnection>
+		<connection>scm:git:git@github.com:sulistionoadi/common-dao-jdbc.git</connection>
+		<url>https://github.com/sulistionoadi/common-dao-jdbc</url>
+		<tag>@{project.version}</tag>
 	</scm>
 
 	<distributionManagement>
