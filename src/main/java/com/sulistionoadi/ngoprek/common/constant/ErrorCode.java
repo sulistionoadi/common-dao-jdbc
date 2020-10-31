@@ -10,6 +10,8 @@ public class ErrorCode {
 	public static String RC_MAXIMUM_DATA_EXCEEDED = "0005";
 	public static String RC_THREAD_FULL = "0006";
 	public static String RC_DATA_INACTIVE = "0007";
+	public static String RC_CONFIG_NOT_FOUND = "0021";
+	public static String RC_CONFIG_DUPLICATE = "0022";
 	
 	public static String RC_ACCESS_DENIED = "0403";
 	
