@@ -15,7 +15,6 @@ public class BaseMasterDTO implements Serializable {
 	private Boolean isDeleted;
 	private Boolean isActive;
 	
-	
 	public BaseMasterDTO() {}
 
 	public BaseMasterDTO(Long id, String createdBy, Date createdDate, String updatedBy, Date updatedDate,
